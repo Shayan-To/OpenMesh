@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <StartupObject>OpenMesh.Program</StartupObject>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B36F6563-08BE-4225-885A-BFEB93D132DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenMesh</RootNamespace>
+    <AssemblyName>OpenMesh</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drawing\ShapeWalker.cs" />
+    <Compile Include="IO\Copy of Type1ShapeFileFormat.cs" />
+    <Compile Include="IO\Project.cs" />
+    <Compile Include="IO\ShapeFileFormat.cs" />
+    <Compile Include="IO\Type1ShapeFileFormat.cs" />
+    <Compile Include="Logic\ArrayPartEnumerator.cs" />
+    <Compile Include="Code\Code.cs" />
+    <Compile Include="Logic\LinearFormatter.cs" />
+    <Compile Include="Logic\NotifyingCollection.cs" />
+    <Compile Include="Logic\NotifyingObject.cs" />
+    <Compile Include="Logic\SubarrayProxy.cs" />
+    <Compile Include="Logic\TextReaderWE.cs" />
+    <Compile Include="PropertyEditor\BooleanEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyEditor\BooleanEditor.Designer.cs">
+      <DependentUpon>BooleanEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyEditor\ColorEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyEditor\ColorEditor.Designer.cs">
+      <DependentUpon>ColorEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyEditor\DoubleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyEditor\DoubleEditor.Designer.cs">
+      <DependentUpon>DoubleEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyEditor\EditablePropertyAttribute.cs" />
+    <Compile Include="Code\FortranColorizer.cs" />
+    <Compile Include="PropertyEditor\EnumEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyEditor\EnumEditor.Designer.cs">
+      <DependentUpon>EnumEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyEditor\IntegerTrackBarEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyEditor\IntegerTrackBarEditor.Designer.cs">
+      <DependentUpon>IntegerTrackBarEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shape\IndicatorShape.cs" />
+    <Compile Include="PropertyEditor\IntegerEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyEditor\IntegerEditor.Designer.cs">
+      <DependentUpon>IntegerEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shape\LinesShape.cs" />
+    <Compile Include="Shape\ShapeBag.cs" />
+    <Compile Include="Shape\ShapeBase.cs" />
+    <Compile Include="Shape\ShapeHierarchyList.cs" />
+    <Compile Include="Shape\ShapeOfCollection.cs" />
+    <Compile Include="Shape\ShapeWithIndicator.cs" />
+    <Compile Include="UI\ErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ErrorDialog.Designer.cs">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Line.cs" />
+    <Compile Include="Shape\PathShape.cs" />
+    <Compile Include="Shape\PenShape.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Logic\Rectangle.cs" />
+    <Compile Include="UI\ScalePane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shape\Shape.cs" />
+    <Compile Include="Drawing\ShapeDrawer.cs" />
+    <Compile Include="Drawing\ShapeDrawingPane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PropertyEditor\ShapeEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyEditor\ShapeEditor.Designer.cs">
+      <DependentUpon>ShapeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyEditor\StringEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyEditor\StringEditor.Designer.cs">
+      <DependentUpon>StringEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShapeTreeViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ShapeTreeViewer.Designer.cs">
+      <DependentUpon>ShapeTreeViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StringInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StringInputDialog.Designer.cs">
+      <DependentUpon>StringInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Utils.cs" />
+    <Compile Include="PropertyEditor\ValueEditorBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="PropertyEditor\BooleanEditor.resx">
+      <DependentUpon>BooleanEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyEditor\ColorEditor.resx">
+      <DependentUpon>ColorEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyEditor\DoubleEditor.resx">
+      <DependentUpon>DoubleEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyEditor\EnumEditor.resx">
+      <DependentUpon>EnumEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyEditor\IntegerEditor.resx">
+      <DependentUpon>IntegerEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ErrorDialog.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PropertyEditor\ShapeEditor.resx">
+      <DependentUpon>ShapeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyEditor\StringEditor.resx">
+      <DependentUpon>StringEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ShapeTreeViewer.resx">
+      <DependentUpon>ShapeTreeViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StringInputDialog.resx">
+      <DependentUpon>StringInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

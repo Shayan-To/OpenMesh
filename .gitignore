@@ -1,0 +1,7 @@
+bin/
+obj/
+UnstructureMesh2D/
+F/
+backup*
+*~
+*.suo
